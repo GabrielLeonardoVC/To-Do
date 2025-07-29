@@ -1,69 +1,103 @@
 import os
-lista_tarefas = []
-menu = 1
-while menu == 1:
-    print("Bem vindo ao seu To Do!")
-    print("Escolha oque você deseja fazer:\n 1- Adicionar tarefas\n 2- Lista das suas tarefas\n 3- Remover alguma tarefa\n 4- Sair do To Do.")
-    escolha = int(input("Oque deseja fazer? Digite o numero a seguir\n -->"))
-    if escolha == 1:
-        addtarefa="Continuar"
-        while addtarefa!="Parar":
-            trf=input("Digite sua Tarefa a seguir\n -->")
-            lista_tarefas.append(trf)
-            addtarefa=input("Você deseja adicinar mais tarefas? Digite Continuar ou Parar --> ")
-            while addtarefa != "Continuar" and  addtarefa != "Parar":
-                print("Comando invalido, digite novamente...")
-                addtarefa=input("Adicionar mais tarefas? Digite Continuar ou Parar: ")
-                print("Suas tarefas foram adicionadas com sucesso!")
-                os.system("cls")
-                os.system("pause")
-    if escolha == 2: 
-        if lista_tarefas == []:
-            print("Você ainda não adicionou nenhuma tarefa. Adicione-as")
-        else:
-            print("As tarefas suas tarefas são:\n ")
-            print(lista_tarefas)
-        os.system("pause")
-    if escolha == 3:
+editar = 0
+out = 1
+trf1 = None
+trf2 = None
+trf3 = None
+trf4 = None
+trf5 = None
+trf6 = None
+trf7 = None
+trf8 = None
+trf9 = None
+trf10 = None 
+os.system("cls")
+
+while out == 1: #Menu de início
+    
+    print("Seja bem vindo(a) ao seu To do!")
+    print("Veja suas opções:\n1º Opção: Add tarefas\n2º Opção: Listar\n3º Opção: Exlcuir tarefas\n4º Opção: Sair do To Do")
+    escolha = int(input("Escolha uma das opções:"))
+    
+    if escolha == 1: 
         os.system("cls")
-        remover = int(input("Digite o número da tarefa para remove-la: "))
-        if remover == 1:    
-            a=None
-            print ("Tarefa 1 Excluida!")
-        elif remover == 2:    
-            b=None
-            print ("Tarefa 2 Excluida!")
-        elif remover == 3:    
-            c=None
-            print ("Tarefa 3 Excluida!")
-        elif remover == 4:    
-            d=None
-            print ("Tarefa 4 Excluida!")
-        elif remover == 5:    
-            e=None
-            print ("Tarefa 5 Excluida!")
-        elif remover == 6:    
-            f=None
-            print ("Tarefa 6 Excluida!")
-        elif remover == 7:    
-            g=None
-            print ("Tarefa 7 Excluida!")
-        elif remover == 8:    
-            h=None
-            print ("Tarefa 8 Excluida!")
-        elif remover == 9:    
-            i=None
-            print ("Tarefa 9 Excluida!")
-        elif remover == 10:    
-            j=None
-            print ("Tarefa 10 Excluida!")
+        Fim = print("Digite sua lista de tarefas abaixo (São 10 tarefas para adicionar).\n\n")
+        trf1 = input("Primeira Tarefa: ")
+        trf2 = input("Segunda Tarefa: ")
+        trf3 = input("Terceira Tarefa: ")
+        trf4 = input("Quarta Tarefa: ")
+        trf5 = input("Quinta Tarefa: ")
+        trf6 = input("Sexta Tarefa: ")
+        trf7 = input("Sétima Tarefa: ")
+        trf8 = input("Oitava Tarefa: ")
+        trf9 = input("Nona Tarefa: ")
+        trf10 = input("Décima Tarefa: ")
+        
+        print("Tarefas adicionadas!")
+        os.system ("pause")
+        os.system ("cls")
+    
+    elif escolha == 2: #Listar tarefas atribuídas para o To Do
+        if (trf1 == None and trf2 == None and trf3 == None and trf4 == None and trf5 == None and trf6 == None and trf7 == None and trf8 == None and trf9 == None and trf10 == None):
+            print("Nenhuma tarefa foi adicionada. Volte ao início para adicioná-las")
+            os.system ("pause")
+            os.system ("cls")
         else:
-            print ("Número de Tarefa inválido")
-        print ("\n\nRetornando ao MENU")
-        os.system("pause")
-    elif escolha == 4:
+            print(f"Lista de suas tarefas está aqui! Veja como ficou:\nPrimeira tarefa: {trf1}\nSegunda Tarefa: {trf2}\nTerceira Tarefa: {trf3}\n Quarta Tarefa: {trf4}\n Quinta Tarefa: {trf5}\n Sexta Tarefa: {trf6}\nSétima Tarefa: {trf7}\n Oitava tarefa: {trf8}\n Nona Tarefa: {trf9}\n Décima tarefa: {trf10}")
+            os.system ("pause")
+            os.system ("cls")
+
+        
+    elif escolha == 3: #Exluir tarefa do To Do
+        if (trf1 == None and trf2 == None and trf3 == None and trf4 == None and trf5 == None and trf6 == None and trf7 == None and trf8 == None and trf9 == None and trf10 == None):
+            print("Nenhuma tarefa foi adicionada. Volte ao início para adicionar.")
+            os.system("pause")
+            os.system("cls")
+        else:
+            os.system("cls")
+            remover = int(input("Digite o número da tarefa para remove-la: "))
+            if remover == 1:    
+                    trf1=None
+                    print (f"Tarefa 1 ({trf1}) removida")
+            elif remover == 2:    
+                    trf2=None
+                    print (f"Tarefa 2 ({trf2}) removida")
+            elif remover == 3:    
+                    trf3=None
+                    print (f"Tarefa 3 ({trf3}) removida")
+            elif remover == 4:    
+                    trf4=None
+                    print (f"Tarefa 4 ({trf4}) removida")
+            elif remover == 5:    
+                    trf5=None
+                    print (f"Tarefa 5 ({trf5}) removida")
+            elif remover == 6:    
+                    trf6=None
+                    print (f"Tarefa 6 ({trf6}) removida")
+            elif remover == 7:    
+                    trf7=None
+                    print (f"Tarefa 7 ({trf7}) removida")
+            elif remover == 8:    
+                    trf8=None
+                    print (f"Tarefa 8 ({trf8}) removida")
+            elif remover == 9:    
+                    trf9=None
+                    print (f"Tarefa 9 ({trf9}) removida")
+            elif remover == 10:    
+                    trf10=None
+                    print (f"Tarefa 10 ({trf10}) removida")
+            elif remover == 0:
+                    print ("Remoção cancelada")
+            else:
+                    print ("Número de Tarefa ERRADA")
+                    int(input("Insira a tarefa correta: "))
+            print ("\n\nRetornando ao MENU")
+            os.system ("pause")
+            os.system ("cls")
+    elif escolha == 4: #Sair do To Do
         os.system("cls")
-        print("Saindo...")
-        sair = 4
+        print("Saindo do To Do...")
+        out = 4
         os.system("pause")
-        sair = 0
+        os.system ("cls")
+
